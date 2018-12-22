@@ -2,4 +2,5 @@
 
 ## Jails
 
-* [rTorrent](rtorrent.md)
+* [rTorrent](rtorrent.sh)
+* [sync](sync.sh)

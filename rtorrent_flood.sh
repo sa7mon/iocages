@@ -25,5 +25,4 @@ curl -Ls "https://raw.githubusercontent.com/sa7mon/iocages/master/rtorrent_flood
 chmod +x /home/$USERNAME/startup.sh
 
 # Set startup script to run on boot
-su $USERNAME
-echo "@reboot /home/$USERNAME/startup.sh" | crontab -
+echo "@reboot /home/$USERNAME/startup.sh" | crontab -u dan -

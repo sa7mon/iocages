@@ -11,7 +11,7 @@ echo "$USERNAME:::::::::" | adduser -f -
 
 # Update pkg and install packages
 env ASSUME_ALWAYS_YES=yes pkg update -f
-pkg install tmux node npm rtorrent
+yes "y" | pkg install tmux node npm rtorrent
 
 # Switch to our non-root user and pull down the config template that comes with rTorrent, enabling RPC socket file
 su $USERNAME

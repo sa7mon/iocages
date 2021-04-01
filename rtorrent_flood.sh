@@ -19,9 +19,12 @@ curl -Ls "https://raw.githubusercontent.com/wiki/rakshasa/rtorrent/CONFIG-Templa
     | sed -e 's/#network.scgi.open_local/network.scgi.open_local/' \
     | sed -e "s/USERNAME/$USERNAME/" > /home/$USERNAME/.rtorrent.rc
 mkdir -p /home/$USERNAME/rtorrent/
+chown $USERNAME:$USERNAME /home/$USERNAME/rtorrent/
+chown $USERNAME:$USERNAME /home/$USERNAME/.rtorrent.rc
 
 # Pull down the startup shell script that will launch rtorrent and flood in a detached tmux session
 curl -Ls "https://raw.githubusercontent.com/sa7mon/iocages/master/rtorrent_flood_startup.sh" > /home/$USERNAME/startup.sh
+chown $USERNAME:$USERNAME /home/$USERNAME/startup.sh
 chmod +x /home/$USERNAME/startup.sh
 
 # Set startup script to run on boot

@@ -17,7 +17,7 @@ yes "y" | pkg install tmux node npm rtorrent
 curl -Ls "https://raw.githubusercontent.com/wiki/rakshasa/rtorrent/CONFIG-Template.md" \
     | sed -ne "/^######/,/^### END/p" \
     | sed -e 's/#network.scgi.open_local/network.scgi.open_local/' \
-    | sed -re "s:/home/USERNAME:$HOME:" > /home/$USERNAME/.rtorrent.rc
+    | sed -e "s/USERNAME/$USERNAME/" > /home/$USERNAME/.rtorrent.rc
 mkdir -p /home/$USERNAME/rtorrent/
 
 # Pull down the startup shell script that will launch rtorrent and flood in a detached tmux session

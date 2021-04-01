@@ -28,4 +28,4 @@ chown $USERNAME:$USERNAME /home/$USERNAME/startup.sh
 chmod +x /home/$USERNAME/startup.sh
 
 # Set startup script to run on boot
-echo "@reboot /home/$USERNAME/startup.sh" | crontab -u dan -
+echo "@reboot /home/$USERNAME/startup.sh" | crontab -u $USERNAME -
